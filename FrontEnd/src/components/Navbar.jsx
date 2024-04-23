@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Navbar() {
+    const [sticky,setSticky]=useState(false)
+     useEffect(()=>{
+         const handlescroll=()=>{
+          if(window.scrollY>0){
+            setSticky(true)
+          }else{
+            setSticky(false)
+          }
+         }
+         window.addEventListener('scroll',handlescroll)
+         return ()=>{
+           window.removeEventListener('scroll',handlescroll)
+         }
+     },[])
     const navitems=(
         <>
         <li><a>Home</a></li>
@@ -10,11 +24,11 @@ export default function Navbar() {
         </>
     );
         
-    
   return (
     <>
-    <div className='max-w-screen-2xl container mx-auto md:px-20 sm:px-4'>
-    <div className="navbar bg-base-100">
+    <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0
+     ${sticky? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out": ""}`}>
+    <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,7 +38,7 @@ export default function Navbar() {
       {navitems}
       </ul>
     </div>
-    <a className="font-bold text-2xl cursor-pointer">bookStore</a>
+    <a className="font-bold text-2xl cursor-pointer">Book Store</a>
   </div>
   <div className='navbar-end space-x-3'>
   <div className="navbar-center hidden lg:flex">
@@ -34,7 +48,7 @@ export default function Navbar() {
   </div>
    <div className='hidden md:block'>
    <label className="px-3 py-2 border rounded-md flex items-center gap-2">
-  <input type="text" className="grow outline-none bg-slate-700" placeholder="Search" />
+  <input type="text" className="grow outline-none" placeholder="Search" />
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
   </label>
    </div>
