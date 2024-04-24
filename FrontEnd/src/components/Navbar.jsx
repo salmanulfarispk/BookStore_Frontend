@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Login from './Login';
 
 export default function Navbar() {
     const [theme,setTheme]=useState(localStorage.getItem("theme")? localStorage.getItem("theme"): "light")
@@ -80,9 +81,10 @@ export default function Navbar() {
 
 </label>
 
-  <div>
+  <div className=''>
     <a className="bg-black text-white px-3 py-2 rounded-md cursor-pointer
-     hover:bg-slate-800 duration-300">Login</a>
+     hover:bg-slate-800 duration-300" onClick={()=>document.getElementById("my_modal_3").showModal()}>Login</a>
+     <Login/>
   </div>
   </div>
   </div>
