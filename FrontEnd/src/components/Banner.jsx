@@ -19,9 +19,9 @@ export default function Banner() {
             </div>
             <button className="btn btn-secondary mt-6">Secondary</button>
         </div>
-        <div className='order-1 w-full md:w-1/2'>
+        <div className='order-1 w-full md:w-1/2 '>
           <img src={bookHero} alt='bookbanner'
-          className='h-92 w-92'/>
+          className='h-92 w-92' />
         </div>
     </div> 
     </>
