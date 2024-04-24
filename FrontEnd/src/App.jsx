@@ -1,4 +1,3 @@
-
 import Courses from "./components/Courses/Courses"
 import Home from "./components/Home/Home"
 import  { Routes,Route } from "react-router-dom"
@@ -9,8 +8,6 @@ function App() {
 
   return (
     <>
-      {/* <Home/>
-      <Course/> */}
 
       <Routes>
         <Route path="/" element={<Home/>}/>
