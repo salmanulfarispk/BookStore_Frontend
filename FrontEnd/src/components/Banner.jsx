@@ -1,5 +1,5 @@
 import React from 'react'
-import bookHero from "../../public/bookHero.jpg"
+import Bookbanner from "/Bookbanner.png"
 
 export default function Banner() {
   return (
@@ -33,9 +33,9 @@ export default function Banner() {
         </div>
         <div className=" order-1 w-full mt-20 md:w-1/2">
           <img
-            src={bookHero}
+            src={Bookbanner}
             className="md:w-[550px] md:h-[460px] md:ml-12"
-            alt=""
+            alt="books"
           />
         </div>
       </div>

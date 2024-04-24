@@ -10,7 +10,7 @@ export default function Courses() {
   return (
     <>
     <Navbar/>
-    <div className='min-h-screen'>
+    <div className='min-h- dark:bg-slate-900 dark:text-white'>
     <Course/>
     </div>
      <Footer/>
