@@ -1,7 +1,7 @@
-import Banner from "./components/Banner"
-import Footer from "./components/Footer"
-import FreeBook from "./components/FreeBook"
-import Navbar from "./components/Navbar"
+
+import Courses from "./components/Courses/Courses"
+import Home from "./components/Home/Home"
+import  { Routes,Route } from "react-router-dom"
 
 
 function App() {
@@ -9,10 +9,17 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <Banner/>
-      <FreeBook/>
-      <Footer/>
+      {/* <Home/>
+      <Course/> */}
+
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/course" element={<Courses/>}/>
+
+
+
+
+      </Routes>
     </>
   )
 }
