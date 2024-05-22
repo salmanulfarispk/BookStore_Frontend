@@ -17,7 +17,7 @@ export default function Course() {
       }
     };   
     getBook();
-    
+
   }, []);
 
   return (
@@ -31,8 +31,8 @@ export default function Course() {
         <p className="mt-12">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
           assumenda? Repellendus, iste corrupti? Tempore laudantium
-          repellendus accusamus accusantium sed architecto odio, nisi expedita
-          quas quidem nesciunt debitis dolore non aspernatur praesentium
+          repellendus accusamus accusantium sed architec odio, nisi expedita
+          quas quidem nesciunt debitis, dhvs dolore non aspernatur praesentium
           assumenda sint quibusdam, perspiciati explicabo sequi fugiat amet
           animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
           consequatur!

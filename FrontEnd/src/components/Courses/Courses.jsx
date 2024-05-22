@@ -11,7 +11,9 @@ export default function Courses() {
     <>
     <Navbar/>
     <div className='min-h- dark:bg-slate-900 dark:text-white'>
+
     <Course/>
+    
     </div>
      <Footer/>
     
